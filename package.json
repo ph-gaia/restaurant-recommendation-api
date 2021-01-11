@@ -6,19 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ph-gaia/restaurant-recommendation-api.git"
-  },
   "keywords": [
     "nodejs",
     "typescript",
     "api"
   ],
   "author": "Paulo Henrique Gaia",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ph-gaia/restaurant-recommendation-api/issues"
-  },
-  "homepage": "https://github.com/ph-gaia/restaurant-recommendation-api#readme"
+  "license": "ISC"
 }
