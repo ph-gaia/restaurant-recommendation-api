@@ -4,9 +4,9 @@ A food recommendation and review app that shows suggestions from actual people t
 
 The app will allow users to follow other people whom they trust and see their recommendations while selecting a product or service.
 
-## Tecnologias utilizadas
+## Technologies used
 ----
-Principais tecnologias utilizadas no código.
+Main technologies used in the code.
 
 💻 [Node.js](https://nodejs.org/)
 
@@ -15,5 +15,3 @@ Principais tecnologias utilizadas no código.
 ✅ [Jest](https://jestjs.io/)
 
 📦 [MongoDB](https://www.mongodb.com/)
-
-🛠 [Github Actions](https://github.com/features/actions)
