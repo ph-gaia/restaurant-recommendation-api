@@ -1,4 +1,4 @@
-import { Controller, Post, Get, Middleware } from '@overnightjs/core';
+import { Controller, Post, Get, Middleware, Put } from '@overnightjs/core';
 import { Response, Request } from 'express';
 import { User } from '@src/models/user';
 import AuthService from '@src/services/auth';
@@ -39,6 +39,35 @@ export class UsersController extends BaseController {
     const token = AuthService.generateToken(user.toJSON());
 
     return res.send({ ...user.toJSON(), ...{ token } });
+  }
+
+  @Get('')
+  public async list(req: Request, res: Response): Promise<Response> {
+    const user = await User.find({});
+    if (!user) {
+      return this.sendErrorResponse(res, {
+        code: 404,
+        message: 'No registered users!',
+      });
+    }
+
+    return res.send({ user });
+  }
+
+  @Put(':id')
+  public async update(req: Request, res: Response): Promise<Response> {
+    const user = await User.findOneAndUpdate(
+      { _id: req.params.id }, req.body
+    );
+
+    if (!user) {
+      return this.sendErrorResponse(res, {
+        code: 404,
+        message: 'User not found!',
+      });
+    }
+
+    return res.send({ user });
   }
 
   @Get('me')

@@ -13,7 +13,7 @@ export enum CUSTOM_VALIDATION {
   DUPLICATED = 'DUPLICATED',
 }
 
-interface UserModel extends Omit<User, '_id'>, Document {}
+interface UserModel extends Omit<User, '_id'>, Document { }
 
 const schema = new mongoose.Schema(
   {
@@ -23,7 +23,7 @@ const schema = new mongoose.Schema(
       required: true,
       unique: [true, 'Email must be unique'],
     },
-    password: { type: String, required: true },
+    password: { type: String, required: true }
   },
   {
     toJSON: {

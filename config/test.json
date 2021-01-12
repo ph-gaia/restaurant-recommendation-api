@@ -1,12 +1,7 @@
 {
   "App": {
-    "resources": {
-      "StormGlass": {
-        "apiToken": "test-token"
-      }
-    },
     "database": {
-      "mongoUrl": "mongodb://localhost:27017/surf-forecast-test"
+      "mongoUrl": "mongodb://localhost:27017/restaurant-recommendation"
     },
     "logger": {
       "enabled": false
